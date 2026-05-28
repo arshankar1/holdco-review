@@ -20,13 +20,15 @@ You provide your financial data (CSV, XLSX, or whatever you have). A Claude Code
 - An honest, Buffett-lens strategic assessment that identifies your portfolio's central tension and ranks where your next dollar goes furthest
 - Partner economics, distributions, and growth strategy slides
 
+**Supports both SDE and EBITDA as the profitability metric** — choose whichever fits your companies.
+
 **Works with 1 company or 10.** Single-operator SMBs and multi-company holdcos alike.
 
 ## What Makes It Different
 
 Most presentation tools give you templates. This gives you analysis.
 
-The strategic assessment doesn't just display your numbers — it reads them, identifies what's working and what isn't, and writes an honest outside-in view of your portfolio. It tells you where $1 of effort goes furthest, what your DSCR trajectory means, and what would actually start the flywheel. The voice is Buffett shareholder letter, not consulting deck.
+The strategic assessment doesn't just display your numbers — it reads them, identifies what's working and what isn't, and writes an honest outside-in view of your portfolio. It tells you where $1 of effort goes furthest, what your DSCR trajectory means, and what to focus on next. The voice is Buffett shareholder letter, not consulting deck.
 
 ## Quick Start
 
@@ -47,13 +49,16 @@ Open the project in [Claude Code](https://claude.ai/code) and run:
 
 The skill will walk you through setup:
 - Your holding company name, branding, and accent color
-- How many companies you operate (1+)
+- Your HoldCo goal and preferred profitability metric (SDE or EBITDA)
+- How many companies you operate (1+) and which metrics matter per company
 - Which optional slides you want (distributions, partner economics, growth strategy)
 - What data you have available
 
 ### 3. Add your data
 
 The skill generates CSV templates tailored to your companies. Fill them in with your financials.
+
+**Bring everything you have.** Asset purchase agreements, equity worksheets, loan documents, IRR models, photos — the more context you provide, the better the output.
 
 **CSV schemas are starting points, not requirements.** If you already have a QuickBooks export, an Excel P&L, or bank statements in a different format, just drop those files in the `data/` folder. The skill will work from whatever you have.
 
@@ -88,8 +93,11 @@ The repo ships with a complete example: **Bridgepoint Capital Partners**, a fict
 | P&L Deep Dive | Quarterly charts, annual bars, YoY comparisons (per company) |
 | Valuation Explorer | Interactive sliders for SDE multiple, shows enterprise value and net equity |
 | Debt Schedule / DSCR | Debt terms, amortization timeline, DSCR trajectory |
-| Outside-In Assessment | Buffett-lens strategic analysis — central question, evidence, flywheel |
+| Outside-In Assessment | Buffett-lens strategic analysis — central question, evidence, recommendations |
 | Where to Focus | Priority-ranked levers showing where $1 goes furthest |
+| Timeline / Journey | Key milestones, acquisitions, and events on a visual timeline |
+| Team Photos | Grid of team photos from the journey (if provided) |
+| Preamble | Context-setting narrative with a relevant excerpt from a holdco leader |
 | Next Steps | Discussion questions for the offsite |
 
 ### Optional (Selected During Setup)
@@ -98,8 +106,6 @@ The repo ships with a complete example: **Bridgepoint Capital Partners**, a fict
 | Distributions | Salary, profit, and reinvested distributions by period |
 | Partner Economics | Equity splits, ownership percentages, vesting schedules |
 | Growth Strategy | 2-3 year growth paths (organic, add-ons, new platforms) |
-| Timeline / Journey | Key milestones since founding |
-| Preamble | Context-setting narrative for the review |
 
 ## Design System
 

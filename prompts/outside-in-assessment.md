@@ -2,6 +2,14 @@
 
 This prompt generates the Outside-In Assessment slide and the Where to Focus slide. These are the most important slides in the deck. They are the reason someone uses this tool instead of building slides in Google Slides.
 
+## Profitability Metric
+
+The user selects their preferred profitability metric (SDE or EBITDA) during onboarding. This choice is stored in `config.json`. Throughout this prompt, wherever a profitability metric is referenced, use the user's chosen metric consistently. Do not mix SDE and EBITDA in the same assessment. All derived calculations (margins, DSCR, FCFADS, multiples, enterprise value math) should use the selected metric.
+
+## User's HoldCo Goal
+
+Read the user's stated goal from `config.json` (e.g., "maximize distributions in 5 years", "grow to $50M revenue", "build a self-funding acquisition vehicle", "pay down all debt and maximize free cash flow"). The central question, evidence framing, and recommendations should all be viewed through this lens. A portfolio optimizing for near-term distributions will have different priorities than one optimizing for enterprise value growth or acquisition velocity. Let the goal shape what "good" looks like.
+
 ## What This Produces
 
 Two slides:
@@ -9,31 +17,31 @@ Two slides:
 1. **An Outside-In View** — a Buffett-lens strategic assessment with three sections:
    - The Central Question (one honest, pointed question)
    - The Evidence (3-4 numbered findings)
-   - What Would Start the Flywheel (3-4 ranked recommendations)
+   - Recommendations (3-4 ranked recommendations to improve upon the central question)
 
 2. **Where Does $1 Go Furthest?** — priority-ranked operational levers:
-   - The Multiplier Effect (what +$100K SDE means at each company's multiple)
+   - The Multiplier Effect (what +$100K of the chosen profitability metric means at each company's multiple)
    - Where the Levers Are (ranked cards with metrics and "Play" descriptions)
 
 ## Input Data
 
 Before running this prompt, read ALL of the following from the user's data directory:
-- All company financials (quarterly revenue, COGS, gross profit, opex, SDE, SDE margin)
+- All company financials (quarterly revenue, COGS, gross profit, opex, profitability metric, margin)
 - Debt schedules (principal, rate, annual service, maturity date per company)
 - Equity invested per company and per partner
-- Portfolio-level aggregates (total revenue, SDE, equity, DSCR)
+- Portfolio-level aggregates (total revenue, profitability metric, equity, DSCR)
 - Any context files or notes the user has provided
-- The config.json for company names, industries, and review period
+- The config.json for company names, industries, review period, profitability metric, and HoldCo goal
 
 Compute the following before writing:
-- TTM revenue, SDE, and SDE margin per company
-- Quarterly SDE margin trend (improving? declining? volatile?)
-- DSCR per company (TTM SDE / annual debt service)
-- FCFADS per company (SDE - annual debt service)
-- Net equity per company (SDE x reasonable multiple - total debt)
+- TTM revenue, profitability metric, and margin per company
+- Quarterly margin trend (improving? declining? volatile?)
+- DSCR per company (TTM profitability metric / annual debt service)
+- FCFADS per company (profitability metric - annual debt service)
+- Net equity per company (profitability metric x reasonable multiple - total debt)
 - Portfolio MOIC (total net equity / total equity invested)
 - Revenue trajectory (growing, flat, declining) per company
-- SDE at acquisition vs SDE today (if acquisition data available)
+- Profitability metric at acquisition vs today (if acquisition data available)
 - When each company's debt fully amortizes
 - What FCFADS looks like at debt payoff
 
@@ -49,26 +57,25 @@ Rules:
 - **No em dashes in prose.** Use commas, periods, or semicolons.
 - **No significance inflation.** Never say "transformative", "revolutionary", "game-changing", "remarkable", or "impressive." If the numbers are good, the numbers speak for themselves.
 - **No AI writing patterns.** No "it's worth noting", "importantly", "notably", "it bears mentioning", "in essence", "fundamentally". Just say the thing.
-- **Specific numbers always.** "$15K/yr short of DSCR breakeven" not "slightly below target." "$180-270K of additional SDE" not "significant margin improvement."
+- **Specific numbers always.** "$15K/yr short of DSCR breakeven" not "slightly below target." "$180-270K of additional profitability" not "significant margin improvement."
 - **Forward-looking over backward-looking.** What does this mean for the next 2-3 years? What changes if nothing changes?
 - **Honest about what isn't working.** But frame it operationally, not as failure. "The business works, the balance sheet is heavy" not "the acquisition was overleveraged." "Revenue recovery" not "turnaround."
-- **Salary distributions are not failure.** If the partners are paying themselves, that was always the plan. Frame it as the baseline, not as a shortcoming.
 - **End each finding with the implication.** Don't just observe. Say what it means. "That's a 5x increase in free cash flow with no operational improvement at all."
 
 ### The Central Question
 
-Find the ONE question that captures the portfolio's defining tension right now. This is not generic. It comes from the data.
+Find the ONE question that captures the portfolio's defining tension right now. This is not generic. It comes from the data. Frame it through the lens of the user's stated HoldCo goal.
 
 Look for:
-- The gap between acquired SDE and current SDE (are they growing beyond what they bought?)
+- The gap between acquired profitability and current profitability (are they growing beyond what they bought?)
 - The tightest DSCR in the portfolio (is there a company that's close to the edge?)
 - The concentration risk (does one company carry the others?)
-- The flywheel status (is capital being recycled, or is it all one-way?)
+- The capital deployment pattern (is equity generating returns? is capital being recycled or is it all one-way?)
 - The bandwidth question (can the operators handle what they have?)
 
 The question should be specific enough that someone who doesn't know the portfolio could understand the tension from the question alone.
 
-**Good example:** "Can we grow SDE beyond acquired levels, and fast enough?"
+**Good example:** "Can we grow profitability beyond acquired levels, and fast enough?"
 **Good example:** "Summit's DSCR is 0.89x. Does the operating improvement get there before the runway runs out?"
 **Bad example:** "How do we grow the portfolio?" (too generic)
 **Bad example:** "What is our strategy?" (not data-driven)
@@ -82,22 +89,22 @@ Each finding has:
 The findings should cover:
 - **The strongest asset** — which company or dynamic is carrying the portfolio? What's the compounding math? (e.g., debt payoff timeline = free cash flow explosion)
 - **The biggest risk** — which company or situation has the thinnest margin for error? What's the specific gap? (e.g., "$80K/yr short of DSCR breakeven")
-- **The flywheel status** — is capital being recycled? Is there organic growth? Are distributions funding reinvestment? Be honest: "early signs" is different from "working at scale"
+- **The capital deployment pattern** — how is equity being deployed across the portfolio? What are the returns on invested capital? Is there reinvestment happening, or is all cash flowing out? Be honest: "early signs of capital recycling" is different from "self-funding at scale"
 - **The portfolio concentration** — how much net equity sits in one company vs. the others? What does that mean?
 
 Do NOT include a finding unless the data supports it. If there's only one company, adjust: focus on operating leverage, margin trajectory, debt payoff timing, and reinvestment capacity.
 
-### What Would Start the Flywheel (3-4 recommendations)
+### Recommendations (3-4 recommendations)
 
 Each recommendation has:
 1. A bold headline (imperative, specific)
 2. A paragraph explaining the ROI math with specific numbers
 
-Rank by ROI. The highest-impact, most-achievable lever goes first.
+Rank by impact. The highest-impact, most-achievable lever goes first. Frame each recommendation as "what would improve the central question" given the user's stated HoldCo goal.
 
 For each recommendation, include:
-- The specific metric to move (SDE margin from X% to Y%, revenue from $Xm to $Ym)
-- The dollar impact ($Z additional SDE)
+- The specific metric to move (margin from X% to Y%, revenue from $Xm to $Ym)
+- The dollar impact ($Z additional profitability)
 - The enterprise value impact at the relevant multiple ($Z x Nx = $W)
 - The DSCR impact if relevant
 - The concrete lever (labor utilization, lead gen, pricing, route density, etc.)
@@ -107,14 +114,14 @@ The final recommendation should always be about measurement and thresholds: "Tra
 ### Where to Focus: Multiplier Effect
 
 For each company, show:
-- What +$100K of SDE is worth at their valuation multiple
+- What +$100K of the chosen profitability metric is worth at their valuation multiple
 - This makes the priority ranking intuitive
 
 ### Where to Focus: Lever Cards
 
 Rank all companies by urgency and impact. The ranking logic:
 1. **DSCR below 1.0x** = highest urgency (existential)
-2. **Largest gap between current and achievable SDE margin** = highest impact
+2. **Largest gap between current and achievable margin** = highest impact
 3. **Pre-revenue / launch phase** = binary outcome, can't be accelerated
 4. **Already healthy** = lowest urgency, let time compound
 
@@ -130,7 +137,7 @@ Each card has:
 When there's only one company:
 - The Central Question focuses on that business's defining tension
 - Evidence covers: operating leverage, margin trajectory, debt timeline, reinvestment capacity
-- Flywheel recommendations focus on internal levers: margin improvement, revenue growth, debt payoff acceleration, cash reinvestment
+- Recommendations focus on internal levers: margin improvement, revenue growth, debt payoff acceleration, reinvestment capacity
 - Where to Focus becomes internal priority ranking: which operational lever moves the needle most?
 - Skip portfolio concentration finding
 

@@ -3,8 +3,19 @@
   "review_period": "Q2 2026",
   "tagline": "Building through essential services",
   "accent_color": "#2563eb",
+  "holdco_goal": "Build a portfolio of essential service businesses that generates $1M+ in annual free cash flow within 5 years",
+  "profitability_metric": "SDE",
+  "preamble_message": "Three years in. Three companies. The question is no longer whether we can acquire, but whether we can grow what we own.",
+  "metrics_per_company": {
+    "greenfield-plumbing": ["revenue", "sde", "sde_margin", "gross_margin", "growth_yoy", "moic"],
+    "summit-franchising": ["revenue", "sde", "sde_margin", "gross_margin", "growth_yoy", "dscr"],
+    "riverstone-fabrication": ["revenue", "sde", "sde_margin", "gross_margin", "moic"]
+  },
   "slides": {
     "welcome": true,
+    "preamble": true,
+    "journey_timeline": true,
+    "team_photos": false,
     "portfolio_overview": true,
     "company_summary": true,
     "pnl_deep_dive": true,
@@ -15,8 +26,6 @@
     "next_steps": true,
     "distributions": true,
     "partner_economics": true,
-    "growth_strategy": true,
-    "timeline": false,
-    "preamble": false
+    "growth_strategy": true
   }
 }

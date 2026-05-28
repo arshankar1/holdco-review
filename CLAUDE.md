@@ -11,7 +11,7 @@ A Claude Code skill that generates self-contained, deployable HTML presentations
 - `.claude/skills/holdco-review.md` — The main skill. Two modes: `setup` (onboarding) and `generate` (build HTML)
 - `design-system/DESIGN.md` — Typography, colors, layout, chart rendering patterns
 - `design-system/slide-catalog.md` — HTML snippets for each slide type
-- `prompts/outside-in-assessment.md` — The strategic assessment prompt (central question, evidence, flywheel)
+- `prompts/outside-in-assessment.md` — The strategic assessment prompt (central question, evidence, recommendations)
 - `example/` — Bridgepoint Capital Partners dummy data + pre-built output
 - `templates/` — Empty CSV templates for users
 
@@ -31,6 +31,5 @@ A Claude Code skill that generates self-contained, deployable HTML presentations
 - Frame struggling businesses operationally, not as failures ("the business works, the balance sheet is heavy")
 - Always use specific numbers ("$15K/yr short of DSCR breakeven" not "slightly below target")
 - Forward-looking over backward-looking
-- Salary distributions are not failure — they were always the plan
 - CSV schemas are directional. Accept whatever files the user has.
 - Must work with 1 company or 10.
