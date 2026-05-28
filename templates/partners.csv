@@ -1,0 +1,4 @@
+partner_name,company,equity_invested,ownership_pct,holdco_ownership_pct,vesting_notes
+# One row per partner per company. Example:
+# Marcus Chen,Greenfield Plumbing Co.,223333,33.3,40.0,Fully vested
+# If equal splits, still list each partner-company combination.

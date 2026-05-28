@@ -1,0 +1,36 @@
+quarter,company_id,company_name,type,amount,recipient,notes
+Q1 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,Marcus Chen,Quarterly management salary
+Q1 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,Sarah Okafor,Quarterly management salary
+Q1 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,David Reeves,Quarterly management salary
+Q2 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,Marcus Chen,Quarterly management salary
+Q2 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,Sarah Okafor,Quarterly management salary
+Q2 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,David Reeves,Quarterly management salary
+Q3 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,Marcus Chen,Quarterly management salary
+Q3 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,Sarah Okafor,Quarterly management salary
+Q3 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,David Reeves,Quarterly management salary
+Q4 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,Marcus Chen,Quarterly management salary
+Q4 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,Sarah Okafor,Quarterly management salary
+Q4 2025,greenfield-plumbing,Greenfield Plumbing Co.,salary,37500,David Reeves,Quarterly management salary
+Q3 2024,summit-franchising,Summit Franchising Group,salary,25000,Marcus Chen,Quarterly management salary
+Q3 2024,summit-franchising,Summit Franchising Group,salary,25000,Sarah Okafor,Quarterly management salary
+Q3 2024,summit-franchising,Summit Franchising Group,salary,25000,David Reeves,Quarterly management salary
+Q4 2024,summit-franchising,Summit Franchising Group,salary,25000,Marcus Chen,Quarterly management salary
+Q4 2024,summit-franchising,Summit Franchising Group,salary,25000,Sarah Okafor,Quarterly management salary
+Q4 2024,summit-franchising,Summit Franchising Group,salary,25000,David Reeves,Quarterly management salary
+Q1 2025,summit-franchising,Summit Franchising Group,salary,25000,Marcus Chen,Quarterly management salary
+Q1 2025,summit-franchising,Summit Franchising Group,salary,25000,Sarah Okafor,Quarterly management salary
+Q1 2025,summit-franchising,Summit Franchising Group,salary,25000,David Reeves,Quarterly management salary
+Q2 2025,summit-franchising,Summit Franchising Group,reinvestment,-18500,Summit Franchising Group,Ops reinvestment - new floor equipment
+Q2 2025,summit-franchising,Summit Franchising Group,salary,25000,Marcus Chen,Quarterly management salary
+Q2 2025,summit-franchising,Summit Franchising Group,salary,25000,Sarah Okafor,Quarterly management salary
+Q2 2025,summit-franchising,Summit Franchising Group,salary,25000,David Reeves,Quarterly management salary
+Q3 2025,summit-franchising,Summit Franchising Group,reinvestment,-12750,Summit Franchising Group,Ops reinvestment - marketing push
+Q3 2025,summit-franchising,Summit Franchising Group,salary,25000,Marcus Chen,Quarterly management salary
+Q3 2025,summit-franchising,Summit Franchising Group,salary,25000,Sarah Okafor,Quarterly management salary
+Q3 2025,summit-franchising,Summit Franchising Group,salary,25000,David Reeves,Quarterly management salary
+Q4 2025,riverstone-fabrication,Riverstone Metal Fabrication,salary,30000,Marcus Chen,Quarterly management salary
+Q4 2025,riverstone-fabrication,Riverstone Metal Fabrication,salary,30000,Sarah Okafor,Quarterly management salary
+Q4 2025,riverstone-fabrication,Riverstone Metal Fabrication,salary,30000,David Reeves,Quarterly management salary
+Q1 2026,riverstone-fabrication,Riverstone Metal Fabrication,salary,30000,Marcus Chen,Quarterly management salary
+Q1 2026,riverstone-fabrication,Riverstone Metal Fabrication,salary,30000,Sarah Okafor,Quarterly management salary
+Q1 2026,riverstone-fabrication,Riverstone Metal Fabrication,salary,30000,David Reeves,Quarterly management salary

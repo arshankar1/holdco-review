@@ -1,0 +1,22 @@
+{
+  "holdco_name": "Bridgepoint Capital Partners",
+  "review_period": "Q2 2026",
+  "tagline": "Building through essential services",
+  "accent_color": "#2563eb",
+  "slides": {
+    "welcome": true,
+    "portfolio_overview": true,
+    "company_summary": true,
+    "pnl_deep_dive": true,
+    "valuation_explorer": true,
+    "debt_schedule": true,
+    "outside_in": true,
+    "where_to_focus": true,
+    "next_steps": true,
+    "distributions": true,
+    "partner_economics": true,
+    "growth_strategy": true,
+    "timeline": false,
+    "preamble": false
+  }
+}

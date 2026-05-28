@@ -1,0 +1,4 @@
+company,lender,original_principal,current_balance,interest_rate,monthly_payment,annual_debt_service,maturity_date,notes
+# One row per debt instrument per company. Example:
+# Greenfield Plumbing Co.,SBA 7(a),2800000,2400000,6.5,53333,640000,2029-12-31,Drops to $240K/yr in 2029
+# Include seller notes, SBA loans, lines of credit — anything with a payment obligation.

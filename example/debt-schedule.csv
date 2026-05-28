@@ -1,0 +1,4 @@
+company_id,company_name,lender,original_balance,current_balance,interest_rate,monthly_payment,annual_service,term_months,origination_date,maturity_date,type
+greenfield-plumbing,Greenfield Plumbing Co.,First Western Bank,2850000,2418493,7.25%,53440,641280,84,2023-01-15,2030-01-15,SBA 7(a)
+summit-franchising,Summit Franchising Group,Peachtree Capital Lending,3900000,3502817,8.50%,60970,731640,120,2024-05-10,2034-05-10,Conventional
+riverstone-fabrication,Riverstone Metal Fabrication,Rocky Mountain Business Finance,1280000,1197183,6.75%,26530,318360,60,2025-09-01,2030-09-01,SBA 7(a)

@@ -1,0 +1,4 @@
+company,quarter,revenue,cogs,gross_profit,gross_margin_pct,opex,sde,sde_margin_pct
+# One row per company per quarter. Example:
+# Greenfield Plumbing Co.,Q1 2024,1800000,1170000,630000,35.0,450000,180000,10.0
+# Partial years are fine — just include the quarters you have.

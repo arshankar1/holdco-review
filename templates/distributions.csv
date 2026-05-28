@@ -1,0 +1,5 @@
+period,company,type,amount,notes
+# type: salary | profit | reinvested
+# Example:
+# Q1 2026,Greenfield Plumbing Co.,salary,87500,Quarterly salary distribution
+# Q1 2026,Greenfield Plumbing Co.,reinvested,25000,Reinvested into route acquisition

@@ -1,0 +1,10 @@
+partner_name,company_id,company_name,fund,equity_invested,ownership_pct,holdco_ownership_pct,role
+Marcus Chen,greenfield-plumbing,Greenfield Plumbing Co.,Fund 1,223334,33.33%,40%,Managing Partner
+Sarah Okafor,greenfield-plumbing,Greenfield Plumbing Co.,Fund 1,223333,33.33%,30%,Partner
+David Reeves,greenfield-plumbing,Greenfield Plumbing Co.,Fund 1,223333,33.33%,30%,Partner
+Marcus Chen,summit-franchising,Summit Franchising Group,Fund 2,180000,33.33%,40%,Managing Partner
+Sarah Okafor,summit-franchising,Summit Franchising Group,Fund 2,180000,33.33%,30%,Partner
+David Reeves,summit-franchising,Summit Franchising Group,Fund 2,180000,33.33%,30%,Partner
+Marcus Chen,riverstone-fabrication,Riverstone Metal Fabrication,Fund 3,296667,33.33%,40%,Managing Partner
+Sarah Okafor,riverstone-fabrication,Riverstone Metal Fabrication,Fund 3,296667,33.33%,30%,Partner
+David Reeves,riverstone-fabrication,Riverstone Metal Fabrication,Fund 3,296666,33.33%,30%,Partner
