@@ -4,6 +4,8 @@
 
 Built by [Truss One Partners](https://truss1.com) — a small holding company that acquires and operates essential service businesses. We built this tool for our own offsites and open-sourced it so other operators can use it too.
 
+**[View the live demo →](https://holdco-review.vercel.app)**
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Farshankar1%2Fholdco-review)
 
 ---
@@ -80,7 +82,7 @@ Or just open `output/index.html` in your browser.
 
 ## Example
 
-The repo ships with a complete example: **Bridgepoint Capital Partners**, a fictional 3-company holdco with realistic SMB financials. See `example/` for the data and `example/output/index.html` for the generated presentation.
+The repo ships with a complete example: **Bridgepoint Capital Partners**, a fictional 3-company holdco with realistic SMB financials. See `example/` for the data and `example/output/index.html` for the generated presentation, or **[view it live](https://holdco-review.vercel.app)**.
 
 ## Slide Types
 
